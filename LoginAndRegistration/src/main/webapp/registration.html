@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Registration Page</title>
+  <link rel="stylesheet" href="regist.css">
+  
+</head>
+<body>
+  <div class="container">
+    <form method="post" action="register"
+    id="register-form" onsubmit="return validateForm();">
+      <h2 >Register</h2>
+      
+         
+        <input type="text" name="name" id="name" placeholder="Your Name" required/>
+        
+        <input type="email" name="email" id="email" placeholder="Your Email" required/>
+     
+   
+        <input type="password" name="pass" id="pass" placeholder="Password" required/>
+     
+      
+        <input type="password" name="re_pass" id="re_pass"
+          placeholder="Conform password" required />
+     
+       
+        <input type="number" name="contact" id="contact"
+          placeholder="Contact no" required />
+     
+      
+        <input type="submit" name="signup"  value="Register" />
+      
+    </form>
+
+  </div>
+  <script>
+    // Function to validate the sign-up form
+  function validateForm() {
+      // Get form elements
+      var nameInput = document.getElementById("name");
+      var emailInput = document.getElementById("email");
+      var passInput = document.getElementById("pass");
+      var rePassInput = document.getElementById("re_pass");
+      var contactInput = document.getElementById("contact");
+  
+      // Check name (minimum 3 characters)
+      if (nameInput.value.length < 3) {
+          alert("Name must be at least 3 characters long.");
+          nameInput.focus();
+          return false;
+      }
+  
+      // Check password (minimum 8 characters, at least one symbol and one capital letter)
+      var passPattern = /^(?=.*[A-Z])(?=.*[\W_]).{8,}$/;
+      if (!passPattern.test(passInput.value)) {
+          alert("Password must be at least 8 characters long and contain a symbol and a capital letter.");
+          passInput.focus();
+          return false;
+      }
+  
+      // Check if confirm password matches password
+      if (passInput.value !== rePassInput.value) {
+          alert("Confirm password does not match the password.");
+          rePassInput.focus();
+          return false;
+      }
+  
+      // Check contact number (must contain exactly 10 digits)
+      var contactPattern = /^\d{10}$/;
+      if (!contactPattern.test(contactInput.value)) {
+          alert("Contact number must contain exactly 10 digits.");
+          contactInput.focus();
+          return false;
+      }
+  
+      alert("Registration successful. You will now be redirected to the login page.");
+
+  return true; // Form submission will proceed if all validations pass
+  }
+  
+  // Attach the validation function to the form submit event
+  document.getElementById("register-form").onsubmit = validateForm;
+    </script>
+    
+</body>
+</html>

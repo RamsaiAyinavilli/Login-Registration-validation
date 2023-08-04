@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(""); /* Replace "your-image-url.jpg" with the actual URL of your image */
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .container {
+    background-color:transparent; /* Adding a semi-transparent white background to the container for better readability */
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    background-color: rgba(19, 74, 152, 0.151);
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #0b0000;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    color: rgb(248, 249, 251);
+  }
+  
+  label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color:lightcyan;
+  }
+  
+  input{
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #cccccc01;
+    border-color: black;
+    border-radius: 4px;
+    color: black;
+    background-color: transparent;
+    -webkit-text-fill-color:#0e0101;
+  }
+  input::selection {
+    background-color:black;
+    -webkit-text-fill-color:#0b0000;
+  }
+  
+  input[type="submit"] {
+    background-color: #007bff;
+    color: #d8c6c6;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+a{
+text-decoration: none;    
+color: black;
+}
+.submit:hover{
+
+    background-color: rgb(48, 48, 226);
+    
+}
+.register-link{
+color: #0e0101;
+}
+.home h1{
+align-items: center;
+justify-content: center;
+margin-left:45%;
+}
+.home p{
+	justify-content: center;
+	margin:0px 100px;
+}

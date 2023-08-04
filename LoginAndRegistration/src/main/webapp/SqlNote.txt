@@ -1,0 +1,11 @@
+need to write code in your database
+
+create database databasename;
+use databasename;
+CREATE TABLE users (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    uname VARCHAR(255) NOT NULL,
+    upwd VARCHAR(255) NOT NULL,
+    uemail VARCHAR(255) NOT NULL,
+    umobile VARCHAR(20) NOT NULL
+);
